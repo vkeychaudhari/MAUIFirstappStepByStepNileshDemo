@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirstappStepByStepNileshDemo.Views.FlyoutPageDemo"
+            xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+             Title="FlyoutPageDemo" FlyoutLayoutBehavior="Popover">
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Master Page">
+            <Label Text="Master page Details" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+    <!--<FlyoutPage.Detail>
+        <ContentPage Title="Detail Page">
+            <Label Text="Detail page Details" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        </ContentPage>
+    </FlyoutPage.Detail>-->
+    <FlyoutPage.Detail>
+        <TabbedPage android:TabbedPage.ToolbarPlacement="Bottom"
+            BarTextColor="DarkGray"
+            SelectedTabColor="Teal" 
+            UnselectedTabColor="DarkGray">
+            <ContentPage Title="Learn" IconImageSource="graduation_cap.svg">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
+                    <Button Text="Button 1"  BackgroundColor="Red" BorderColor="Black" CornerRadius="5" BorderWidth="1"/>
+                    <Button Text="Button 2"/>
+                    <Button Text="Button 3" />
+                </StackLayout>
+            </ContentPage>
+            <ContentPage Title="Community" IconImageSource="community_demo.svg">
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <Button Text="Button 1" Margin="0,10"/>
+                    <Button Text="Button 2"/>
+                    <Button Text="Button 3" Margin="0,10"/>
+                </StackLayout>
+            </ContentPage>
+            <ContentPage Title="Leadboard" IconImageSource="trophy_demo.svg">
+                <Label Text="This Tab 3" TextColor="Red"/>
+            </ContentPage>
+            <ContentPage Title="Create" IconImageSource="code_demo.svg">
+                <Label Text="This Tab 3" TextColor="Red"/>
+            </ContentPage>
+        </TabbedPage>
+    </FlyoutPage.Detail>
+</FlyoutPage>

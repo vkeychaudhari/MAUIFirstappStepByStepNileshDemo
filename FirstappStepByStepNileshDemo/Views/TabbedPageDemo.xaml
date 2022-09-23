@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirstappStepByStepNileshDemo.Views.TabbedPageDemo"
+             Title="TabbedPageDemo" BackgroundColor="Red"
+            BarTextColor="Pink" 
+            SelectedTabColor="Green" 
+            UnselectedTabColor="Grey"
+            xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+            android:TabbedPage.ToolbarPlacement="Bottom">
+    <ContentPage Title="Tab 1">
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
+            <Button Text="Button 1"  BackgroundColor="Red" BorderColor="Black" CornerRadius="5" BorderWidth="1"/>
+            <Button Text="Button 2"/>
+            <Button Text="Button 3" />
+            <ImageButton Source="dotnet_bot.svg" HeightRequest="100" BackgroundColor="Black"/>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Tab 2">
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Button Text="Button 1" Margin="0,10"/>
+            <Button Text="Button 2"/>
+            <Button Text="Button 3" Margin="0,10"/>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Tab 3">
+        <Label Text="This Tab 3" TextColor="Red"/>
+    </ContentPage>
+</TabbedPage>
